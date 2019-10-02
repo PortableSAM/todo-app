@@ -1,0 +1,29 @@
+.todo-list-templ {
+    background: linear-gradient(#2193b0, #6dd5ed);
+    width: 512px;
+    box-shadow: 0 3px 6px rgba(83, 92, 104, 1.0), 0 3px 6px rgba(48, 51, 107, 1.0);
+    margin: 0 auto;
+    margin-top: 4rem;
+    border-radius: 5px;
+}
+
+.title {
+    padding: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(#1A2980, #26D0CE);
+    color: rgba(199, 236, 238, 1.0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-wrapper {
+    padding: 1rem;
+    border-bottom: 1px solid #636e72;
+}
+
+.todos-wrapper {
+    min-height: 5rem;
+}
