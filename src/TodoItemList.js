@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 
 class TodoItemList extends Component {
+	shouldComponentUpdate(nextProps, nextState) {
+		return this.props.toDos !== nextProps.toDos;
+	}
 	render() {
 		const { toDos, onToggle, onRemove } = this.props;
 
-		return (
-			<div>
-				<TodoItem text="무엇이든 하자" />
-				<TodoItem text="서비스 앱 만들자" />
-				<TodoItem text="자주자주 토이프로젝트" />
-			</div>
-		);
+		const toDoList = toDos.map(({ id, text, checked }) => (
+			<TodoItem id={id} text={text} checked={checked} onToggle={onToggle} onRemove={onRemove} key={id} />
+		));
+
+		return <div>{toDoList}</div>;
 	}
 }
 
